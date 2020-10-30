@@ -1,6 +1,6 @@
 <h1>Аренда и прокат автомобилей!</h1>
 
-</h1>Rent and hire cars<h1>
+<h1>Rent and hire cars</h1>
 
 
 <h2>
