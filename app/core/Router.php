@@ -49,7 +49,7 @@ class Router {
             
 
             $this->controller = ucfirst($this->controller);
-            $obj = "\app\Controller\\". $this->controller;
+            $obj = "\app\controller\\". $this->controller;
             if(class_exists($obj)){
                 $obj  = new $obj();
                 if(method_exists($obj, $this->action)) {
@@ -63,7 +63,7 @@ class Router {
             }
 
         } else {
-            $obj = "app\Controller\\". $this->controller;
+            $obj = "app\controller\\". $this->controller;
             call_user_func_array([$obj, $this->action], $this->params);
         }
         
