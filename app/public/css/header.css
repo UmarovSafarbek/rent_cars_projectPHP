@@ -1,0 +1,58 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.781);
+    padding: 10px 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+header nav ul li{
+    display: inline;
+}
+
+header nav div a{
+    color: white;
+} 
+
+header nav ul li a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 10px 0 40px;
+    padding: 20px 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+header nav ul li a:hover{
+    color: red;
+    transition: 0.32s ease-in-out;
+}
+
+header nav .logSite a{
+    font-size: 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+header nav .logSite a span{
+    color: red;
+}
+

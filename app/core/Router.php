@@ -20,6 +20,9 @@ class Router {
         
     }
 
+     /**
+     * Get the URL
+     */
     public function getUrl() {
         return  $_GET['url'] ?? null;
     }
@@ -55,15 +58,18 @@ class Router {
                 if(method_exists($obj, $this->action)) {
                     call_user_func_array([$obj, $this->action], $this->params);
                 } else {
-                    $this->func->div("Method not found!!! ");
+                    $this->func->setStatusCode(404);
+                    include  VIEWFOL. "404.html";
                 }
 
             } else {
-                $this->func->div("Page not found!!!");
+                $this->func->setStatusCode(404);
+                include  VIEWFOL. "404.html";
             }
 
         } else {
             $obj = "app\controller\\". $this->controller;
+            $obj = new $obj();
             call_user_func_array([$obj, $this->action], $this->params);
         }
         

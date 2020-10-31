@@ -9,8 +9,13 @@ class Home extends Controller{
         parent::__construct();
     }
 
-    public function index($index = null){
-        echo $this->func->div("Index method from Home");
+    public function index(){
+       
+        $this->title = "Main";
+
+        $this->layoutHeader();
+        $this->view("home/index");
+        $this->layoutFooter();
         
     }
 }

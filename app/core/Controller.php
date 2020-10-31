@@ -13,7 +13,7 @@ class Controller {
     }
 
 
-    public function view($file, $title) {
+    public function view($file, $params = []) {
         
         include ROOT . "/app/view/" . $file . ".php";
     }
