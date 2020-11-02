@@ -8,5 +8,3 @@
   <br>
 My new project with using mvc
 </h2>
-
-It`s great project I think:)
