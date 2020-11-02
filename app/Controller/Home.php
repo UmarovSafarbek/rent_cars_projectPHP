@@ -11,7 +11,7 @@ class Home extends Controller{
 
     public function index(){
        
-        $this->title = "Main";
+        $this->data = ["title" => "Главная"];
 
         $this->layoutHeader();
         $this->view("home/index");

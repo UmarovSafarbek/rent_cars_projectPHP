@@ -10,12 +10,12 @@ class Contact extends Controller{
     }
 
     public function index(){
-       $this->title = "Contact";
+       $this->data = ["title" => "Contact", "css" => "contAbout"];
        $this->layoutHeader();
        $this->view("contact/contact", "Contact");
        $this->layoutFooter();
     }
 
-
+    
 
 }

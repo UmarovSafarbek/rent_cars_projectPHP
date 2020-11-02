@@ -5,11 +5,14 @@ namespace app\core;
 class Controller {
     
     public Func $func;
-    
-    public $title;
+    /**
+     * @param array $data
+     * In this variable  will add title, css file etc
+     */
+    public $data = [];
 
     public function __construct() {
-        $this->func = new Func();
+        $this->func = new Func(); 
     }
 
 
