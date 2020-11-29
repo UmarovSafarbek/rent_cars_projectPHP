@@ -25,6 +25,19 @@ class Func {
         http_response_code($code);
     }
 
+    public function sessinStart(){
+        session_start();
+    }
+
+    public function sessionDestroy(){
+        session_destroy();
+    }
+
+    public function getSessions() {
+        return $_SESSION;
+    }
+
+
 
 }
 

@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+
+
 class Controller {
     
     public Func $func;
@@ -11,10 +13,17 @@ class Controller {
      */
     public $data = [];
 
-    public function __construct() {
-        $this->func = new Func(); 
+    public $model;
+
+    public function __construct($fileModel) {
+        $this->func = new Func();
+        $this->model = $this->modelFile($fileModel);
     }
 
+    public function modelFile($file) {
+       $class =  "\app\model\\" . $file;
+        return new $class();
+    }
 
     public function view($file, $params = []) {
         
@@ -23,11 +32,21 @@ class Controller {
 
     
     
-    public function layoutHeader() {
-        include ROOT . "/app/view/layout/header.php";
+    public function layoutHeader($admin = null) {
+        if($admin == "admin"){
+            include ROOT . "/app/view/layout/headerAdmin.php";
+        } else{
+            include ROOT . "/app/view/layout/header.php";
+        }
+        
     }
 
-    public function layoutFooter() {
-        include ROOT . "/app/view/layout/footer.php";
+    public function layoutFooter($admin = null) {
+        if($admin == "admin"){
+            include ROOT . "/app/view/layout/footerAdmin.php";
+        } else{
+            include ROOT . "/app/view/layout/footer.php";
+        }
+        
     }
 }

@@ -20,9 +20,14 @@ class Router {
         
     }
 
+
      /**
+      * 
      * Get the URL
+     * 
      */
+
+
     public function getUrl() {
         return  $_GET['url'] ?? null;
     }
@@ -52,7 +57,7 @@ class Router {
             
 
             $this->controller = ucfirst($this->controller);
-            $obj = "\app\controller\\". $this->controller;
+            $obj = "\app\controller\\". $this->controller . "Controller";
             if(class_exists($obj)){
                 $obj  = new $obj();
                 if(method_exists($obj, $this->action)) {
@@ -64,17 +69,19 @@ class Router {
 
             } else {
                 $this->func->setStatusCode(404);
-                include  VIEWFOL. "404.html";
+                include  VIEWFOL . "404.html";
             }
 
         } else {
-            $obj = "app\controller\\". $this->controller;
+            $obj = "app\controller\\". $this->controller . "Controller";
             $obj = new $obj();
             call_user_func_array([$obj, $this->action], $this->params);
         }
         
-
-
     }
 
 }
+
+
+
+

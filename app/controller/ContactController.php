@@ -3,7 +3,7 @@ namespace app\controller;
 
 use app\core\Controller;
 
-class Contact extends Controller{
+class ContactController extends Controller{
     
     public function __construct() {
         parent::__construct();
@@ -14,8 +14,8 @@ class Contact extends Controller{
        $this->layoutHeader();
        $this->view("contact/contact", "Contact");
        $this->layoutFooter();
+      
     }
 
-    
 
 }

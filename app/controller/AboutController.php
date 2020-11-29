@@ -4,7 +4,7 @@ namespace app\controller;
 
 use app\core\Controller;
 
-class About extends Controller
+class AboutController extends Controller
 {
 
 
