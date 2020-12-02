@@ -13,3 +13,60 @@
       <p class="mt-5 mb-3 text-muted">© 2020</p>
     </form>
 </div>
+
+
+<script>
+
+const URL = 'http://localhost/avtoarenda/'
+let messageSpan = document.getElementById("messageSpan");
+
+
+
+let button = document.getElementById('submitAdmin');
+
+button.addEventListener("click", sendData)
+
+
+
+function sendData() {
+    var emailName = document.getElementById("nameEmail");
+    var password = document.getElementById("password");
+    if(name.value != "" && emailName.value != "") {
+      var data = "nameEmail="+emailName.value+"&"+"password="+password.value;
+        ajax(data, messageSpan)
+    } else {
+        messageSpan.innerHTML = "Пожалуйста заполняйте все поля";
+    }
+
+}
+
+
+
+
+function ajax(data, message) {
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", URL + "admin/login");
+    xhr.onload = () => {
+        if(xhr.status == 200 && xhr.readyState == 4) {
+            console.log(xhr.response);
+             var res = JSON.parse(xhr.response);
+            
+             if(res.error) {
+                message.innerHTML = res.message;
+             } else {
+                message.innerHTML = res.message;
+                document.location = URL + "admin/manager";
+
+             }
+        } else {
+            return false
+        } 
+    }
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send(data)
+}
+
+
+
+</script>

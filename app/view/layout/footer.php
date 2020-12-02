@@ -26,10 +26,10 @@
     </div>
 </section>
 
-    <script  src="<?php echo PUBFOL . "js/script.js"; ?>"></script>
-    <script  src="<?php echo PUBFOL . "js/footer.js"; ?>"></script>
+    <script  src="<?php echo APP . PUBFOL . "js/script.js"; ?>"></script>
+    <script  src="<?php echo APP . PUBFOL . "js/footer.js"; ?>"></script>
     <?php if(isset($this->data['js'])) : ?>
-    <script type="module" src="<?php echo PUBFOL . "js/{$this->data['js']}.js"; ?>"></script>
+    <script type="module" src="<?php echo APP . PUBFOL . "js/{$this->data['js']}.js?222t=222"; ?>"></script>
     <?php endif; ?>
 </body>
 </html>

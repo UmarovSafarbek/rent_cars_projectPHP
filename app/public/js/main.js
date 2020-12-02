@@ -33,19 +33,20 @@ sendButton.addEventListener("click", sendData);
 function showOrderForm(e) {
     e.preventDefault();
     formOrder.classList.toggle("orderHide");
-    document.body.classList.toggle('over')
+    sendButton.dataset.id =  e.target.dataset.id ?? "";
 }
 
 
 
 var messageSpan = document.getElementById("Message"); 
 
-function sendData() {
+function sendData(e) {
     var name = document.getElementById("name");
     var phone = document.getElementById("phone");
     var message = document.getElementById("messageInp");
+    var id = e.target.dataset.id;
     if(name.value != "" && phone.value != "" && message.value != "") {
-      var data = "name="+name.value+"&"+"phone="+phone.value+"&message="+message.value;
+      var data = "name="+name.value+"&"+"phone="+phone.value+"&message="+message.value+"&id="+id;
         ajax(data, messageSpan);
         formOrder.style.display = ''
         message.value = ""

@@ -7,6 +7,8 @@ use PDO;
 
 class Model
 {
+    public Func $func;
+
     public  $pdo;
     private $DBname = DBNAME;
     private $host = HOSTDB;
@@ -23,6 +25,8 @@ class Model
         } catch (Exception $e) {
             echo $e->getMessage();
         }
+
+        $this->func = new Func();
     }
 
 
@@ -147,7 +151,7 @@ class Model
 
         $columns = array_keys($fields);
 
-        if(count($fields) <= 5){
+        if(count($fields) <= 6){
             $sql1 = "INSERT INTO $table(" . $columns[0] . " " ;
             $sql2 = ") VALUES(:" . $columns[0] . " ";
 
@@ -169,13 +173,16 @@ class Model
                 $sql1 .= ", " . $columns[4] . " ";
                 $sql2 .= ", :" .$columns[4] .  " ";
             }
+            if(isset($columns[5])){
+                $sql1 .= ", " . $columns[5] . " ";
+                $sql2 .= ", :" .$columns[5] .  " ";
+            }
         }
 
         $sql = $sql1 . $sql2 . ")";
         $stmt = $this->query($sql);
         return $stmt->execute($fields);
     }
-
 
 
 }

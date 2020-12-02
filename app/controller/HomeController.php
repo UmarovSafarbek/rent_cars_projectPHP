@@ -14,10 +14,11 @@ class HomeController extends Controller{
     public function index(){
        
         $this->data = ["title" => "Главная", "js" => "main"];
-
+        $cars = $this->model->selectAll("cars");
         $this->layoutHeader();
-        $this->view("home/index");
+        $this->view("home/index", $cars);
         $this->layoutFooter();
+
         
     }
 

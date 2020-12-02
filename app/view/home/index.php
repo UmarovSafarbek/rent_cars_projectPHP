@@ -43,10 +43,7 @@
 
     </div>
 
-    <a href="#" class="order">
-        <i class="fas fa-user-alt"></i> ПОДБОР МАШИНЫ С МЕНЕДЖЕРОМ
-    </a>
-
+   
 </section>
 
 
@@ -57,161 +54,21 @@
     </div>
 
     <div class="cont">
-
+    <?php foreach($params as $car => $val) : ?>
         <div class="car">
             <div class="about">
-                <img src="<?php echo  PUBFOL ?>/imges/car.jpg" width="200" alt="">
+                <img src="<?php echo  PUBFOL . "images/carsImage/" . $params[$car]['photo'] ?>" width="200" alt="">
                 <div>
-                    <h2> Nissan Almera Classiс, </h2>
+                    <h2> <?php echo $params[$car]['name'] ?> </h2>
                     <br>
-                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong> 2005-2012</p>
-                    <p><i class="fas fa-palette"></i> <strong>Цвета:</strong> Белый, Черный, Серый</p>
+                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong><?php echo $params[$car]['year'] ?></p>
+                    <p><i class="fas fa-palette"></i> <strong>Цвета: </strong><?php echo $params[$car]['color'] ?></p>
                 </div>
             </div>
-            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red">1000-1200 руб./день 100руб в чась</span></h3>
-            <a class="order" href="##">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
+            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red"><?php echo $params[$car]['price_hour'] ?> руб./день <?php echo $params[$car]['price_day'] ?></span></h3>
+            <a class="order" data-id="<?php echo $params[$car]['id_car'] ?>" href="##">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
         </div>
-
-
-        <div class="car">
-            <div class="about">
-                <img src="<?php echo  PUBFOL ?>/imges/car.jpg" width="200" alt="">
-                <div>
-                    <h2> Nissan Almera Classiс, </h2>
-                    <br>
-                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong> 2005-2012</p>
-                    <p><i class="fas fa-palette"></i> <strong>Цвета:</strong> Белый, Черный, Серый</p>
-                </div>
-            </div>
-            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red">1000-1200 руб./день 100руб в чась</span></h3>
-            <a class="order" href="##">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
-        </div>
-
-
-
-        <div class="car">
-            <div class="about">
-                <img src="<?php echo  PUBFOL ?>/imges/car.jpg" width="200" alt="">
-                <div>
-                    <h2> Nissan Almera Classiс, </h2>
-                    <br>
-                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong> 2005-2012</p>
-                    <p><i class="fas fa-palette"></i> <strong>Цвета:</strong> Белый, Черный, Серый</p>
-                </div>
-            </div>
-            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red">1000-1200 руб./день 100руб в чась</span></h3>
-            <a class="order" href="##">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
-        </div>
-
-
-
-        <div class="car">
-            <div class="about">
-                <img src="<?php echo  PUBFOL ?>/imges/car.jpg" width="200" alt="">
-                <div>
-                    <h2> Nissan Almera Classiс, </h2>
-                    <br>
-                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong> 2005-2012</p>
-                    <p><i class="fas fa-palette"></i> <strong>Цвета:</strong> Белый, Черный, Серый</p>
-                </div>
-            </div>
-            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red">1000-1200 руб./день 100руб в чась</span></h3>
-            <a class="order" href="##">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
-        </div>
-
-
-
-        <div class="car">
-            <div class="about">
-                <img src="<?php echo  PUBFOL ?>/imges/car.jpg" width="200" alt="">
-                <div>
-                    <h2> Nissan Almera Classiс, </h2>
-                    <br>
-                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong> 2005-2012</p>
-                    <p><i class="fas fa-palette"></i> <strong>Цвета:</strong> Белый, Черный, Серый</p>
-                </div>
-            </div>
-            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red">1000-1200 руб./день 100руб в чась</span></h3>
-            <a class="order" href="##">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
-        </div>
-
-
-
-        <div class="car">
-            <div class="about">
-                <img src="<?php echo  PUBFOL ?>/imges/car.jpg" width="200" alt="">
-                <div>
-                    <h2> Nissan Almera Classiс, </h2>
-                    <br>
-                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong> 2005-2012</p>
-                    <p><i class="fas fa-palette"></i> <strong>Цвета:</strong> Белый, Черный, Серый</p>
-                </div>
-            </div>
-            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red">1000-1200 руб./день 100руб в чась</span></h3>
-            <a class="order" href="##">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
-        </div>
-
-
-        <div class="car">
-            <div class="about">
-                <img src="<?php echo  PUBFOL ?>/imges/car.jpg" width="200" alt="">
-                <div>
-                    <h2> Nissan Almera Classiс, </h2>
-                    <br>
-                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong> 2005-2012</p>
-                    <p><i class="fas fa-palette"></i> <strong>Цвета:</strong> Белый, Черный, Серый</p>
-                </div>
-            </div>
-            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red">1000-1200 руб./день 100руб в чась</span></h3>
-            <a class="order" href="##">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
-        </div>
-
-
-        <div class="car">
-            <div class="about">
-                <img src="<?php echo  PUBFOL ?>/imges/car.jpg" width="200" alt="">
-                <div>
-                    <h2> Nissan Almera Classiс, </h2>
-                    <br>
-                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong> 2005-2012</p>
-                    <p><i class="fas fa-palette"></i> <strong>Цвета:</strong> Белый, Черный, Серый</p>
-                </div>
-            </div>
-            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red">1000-1200 руб./день 100руб в чась</span></h3>
-            <a class="order" href="##">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
-        </div>
-
-
-
-        <div class="car">
-            <div class="about">
-                <img src="<?php echo  PUBFOL ?>/imges/car.jpg" width="200" alt="">
-                <div>
-                    <h2> Nissan Almera Classiс, </h2>
-                    <br>
-                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong> 2005-2012</p>
-                    <p><i class="fas fa-palette"></i> <strong>Цвета:</strong> Белый, Черный, Серый</p>
-                </div>
-            </div>
-            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red">1000-1200 руб./день 100руб в чась</span></h3>
-            <a class="order" href="##">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
-        </div>
-
-
-        <div class="car">
-            <div class="about">
-                <img src="<?php echo  PUBFOL ?>/imges/car.jpg" width="200" alt="">
-                <div>
-                    <h2> Nissan Almera Classiс, </h2>
-                    <br>
-                    <p><i class="far fa-calendar-alt"></i> <strong>Годы выпуска: </strong> 2005-2012</p>
-                    <p><i class="fas fa-palette"></i> <strong>Цвета:</strong> Белый, Черный, Серый</p>
-                </div>
-            </div>
-            <h3> <i class="fas fa-money-check-alt"></i> Цена: <span style="color: red">1000-1200 руб./день 100руб в чась</span></h3>
-            <a class="order" href="dsfsdgfsd">АРЕНДОВАТЬ ЭТО АВТО <i class="fas fa-hand-pointer"></i></a>
-        </div>
-
-
+    <?php endforeach; ?>
+       
     </div>
 </section>

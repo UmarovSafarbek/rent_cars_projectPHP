@@ -15,9 +15,9 @@ class Controller {
 
     public $model;
 
-    public function __construct($fileModel) {
+    public function __construct($fileModel = null) {
         $this->func = new Func();
-        $this->model = $this->modelFile($fileModel);
+        if(isset($fileModel)) $this->model = $this->modelFile($fileModel);
     }
 
     public function modelFile($file) {

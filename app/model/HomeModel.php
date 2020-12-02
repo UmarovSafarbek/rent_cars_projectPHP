@@ -25,12 +25,16 @@ class HomeModel extends Model {
                 "name"=> $fields_inp["name"],
                 "phone"=> $fields_inp["phone"],
                 "message"=> $fields_inp['message'],
+                "id_car" => $fields_inp["id"],
                 "date"=> date("Y-m-d H:i:s")    
             ]);
             echo json_encode(["message"=>"Спасибо за отзив", "error" => false]);
         }
       
     }
+
+
+    
 
 
 }
